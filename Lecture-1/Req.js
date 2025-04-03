@@ -1,13 +1,12 @@
-const http = require('http')
+const http = require("http");
 
-function reqresHandler(req,res){
-    console.log(req.url,req.method,req.headers)
-}
-const server = http.createServer(reqresHandler);
+const server = http.createServer((req, res) => {
+  console.log(req.url, req.method, req.headers);
+});
 
-server.listen(3002,()=>{
-    console.log(`server is running on port http://localhost:3002`)
-})
+server.listen(3002, () => {
+  console.log(`server is running on port http://localhost:3002`);
+});
 
 // In Node.js, the req object is an instance of http.IncomingMessage. It represents the HTTP request and contains information about the client's request, such as:
 
